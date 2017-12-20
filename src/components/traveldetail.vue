@@ -1,6 +1,7 @@
 <template>
   <div class="traveldetail">
     <p>Travel</p>
+    <p>{{id}}</p>
   </div>
 </template>
 
@@ -9,8 +10,12 @@ export default {
   name: 'traveldetail',
   data () {
     return {
+    	id : ''
     }
-  }
+  },
+  mounted(){
+      this.id = this.$route.params.id;
+    }
 }
 </script>
 

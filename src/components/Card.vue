@@ -2,7 +2,7 @@
   <div class="card">
     <mu-card v-for="item in newsList"
       :key="item.key">
-      <router-link :to="{name: 'traveldetail'}">
+      <router-link :to="{name: 'traveldetail', params: {id: item.id}}">
       <mu-card-media :title="item.title">
         <img :src="item.src" />
       </mu-card-media>
