@@ -2,14 +2,11 @@
   <div class="hello">
     <img src="../assets/logo.png">
     <h2>Simpleelegant</h2>
-    <ul>
-      <li
-        is="Card"
-        v-for="item in newsList"
-        v-bind:todo="item"
-        v-bind:key="item.id">
-      </li>
-    </ul>
+    <Card
+      v-for="item in newsList"
+      v-bind:todo="item"
+      v-bind:key="item.id">    
+    </Card>
     <h1>{{ msg }}</h1>
   </div>
 </template>

@@ -8,7 +8,7 @@
     </mu-card-media>
     <mu-card-title title="Content Title" subTitle="Content Title"/>
     <mu-card-text>
-      {{sf}}
+      {{todo.text}}
     </mu-card-text>
     <mu-card-actions>
       <mu-flat-button label="Action 1"/>
@@ -23,7 +23,6 @@ export default {
   porps: ['todo'],
   data () {
     return {
-      sf: 'movies'
     }
   }
 }
