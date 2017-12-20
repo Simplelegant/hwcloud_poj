@@ -2,10 +2,12 @@
   <div class="card">
     <mu-card v-for="item in newsList"
       :key="item.key">
+      <router-link :to="{name: 'traveldetail'}">
       <mu-card-media :title="item.title">
         <img :src="item.src" />
       </mu-card-media>
       <mu-card-title :title="item.text" subTitle="Content Title"/>
+      </router-link>
     </mu-card>
   </div>
 </template>
@@ -16,9 +18,9 @@ export default {
   data () {
     return {
       newsList: [
-        {id : 0, title: '重庆', text: '洪洞崖呀那么美', src: 'src/assets/chongqing.jpg'},
-        {id : 1, title: '都江堰', text: '拜水都江堰', src: 'src/assets/dujiangyan.jpg'},
-        {id : 2, title: '成都', text: 'IFS和大熊猫', src: 'src/assets/chengdu.jpg'}
+        {id : 0, title: '重庆', text: '洪洞崖呀那么美', src: '/static/chongqing.jpg'},
+        {id : 1, title: '都江堰', text: '拜水都江堰', src: '/static/dujiangyan.jpg'},
+        {id : 2, title: '成都', text: 'IFS和大熊猫', src: '/static/chengdu.jpg'}
       ]
     }
   }
