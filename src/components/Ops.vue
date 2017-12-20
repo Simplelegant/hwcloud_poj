@@ -2,11 +2,7 @@
   <div class="hello">
     <img src="../assets/logo.png">
     <h2>Simpleelegant</h2>
-    <Card
-      v-for="item in newsList"
-      v-bind:todo="item"
-      v-bind:key="item.id">    
-    </Card>
+    <Card></Card>
     <h1>{{ msg }}</h1>
   </div>
 </template>
@@ -20,12 +16,8 @@ export default {
   },
   data() {
     return {
-      msg : 'ops',
-      newsList: [
-        {id : 0, title: 'dujiangyan', text: 'hhh'},
-        {id : 1, title: 'a', text: 'b'}
-      ]
-  }
+      msg : 'ops'
+    }
   }
 }
 </script>

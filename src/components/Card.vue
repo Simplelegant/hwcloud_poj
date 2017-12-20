@@ -1,28 +1,34 @@
 <template>
-  <mu-card>
-    <mu-card-header title="Myron Avatar" subTitle="sub title">
-      <mu-avatar src="../assets/uicon.jpg" slot="avatar"/>
-    </mu-card-header>
-    <mu-card-media title="bbb" subTitle="Image Sub Title">
-      <img src="../assets/sun.jpg" />
-    </mu-card-media>
-    <mu-card-title title="Content Title" subTitle="Content Title"/>
-    <mu-card-text>
-      {{todo.text}}
-    </mu-card-text>
-    <mu-card-actions>
-      <mu-flat-button label="Action 1"/>
-      <mu-flat-button label="Action 2"/>
-    </mu-card-actions>
-  </mu-card>
+  <div class="card">
+    <mu-card v-for="item in newsList"
+      :key="item.key">
+      <mu-card-header title="Myron Avatar" subTitle="sub title">
+        <mu-avatar src="../assets/uicon.jpg" slot="avatar"/>
+      </mu-card-header>
+      <mu-card-media title="bbb" subTitle="Image Sub Title">
+        <img src="../assets/sun.jpg" />
+      </mu-card-media>
+      <mu-card-title title="Content Title" subTitle="Content Title"/>
+      <mu-card-text>
+        {{item.text}}
+      </mu-card-text>
+      <mu-card-actions>
+        <mu-flat-button label="Action 1"/>
+        <mu-flat-button label="Action 2"/>
+      </mu-card-actions>
+    </mu-card>
+  </div>
 </template>
 
 <script>
 export default {
   name: 'Card',
-  porps: ['todo'],
   data () {
     return {
+      newsList: [
+        {id : 0, title: 'dujiangyan', text: 'hhh'},
+        {id : 1, title: 'a', text: 'b'}
+      ]
     }
   }
 }
