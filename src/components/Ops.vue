@@ -1,7 +1,5 @@
 <template>
   <div class="hello">
-    <img src="../assets/logo.png">
-    <h2>Simpleelegant</h2>
     <Card></Card>
     <h1>{{ msg }}</h1>
   </div>
@@ -16,7 +14,7 @@ export default {
   },
   data() {
     return {
-      msg : 'ops'
+      msg : '~我是有底线哒~'
     }
   }
 }

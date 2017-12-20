@@ -2,20 +2,10 @@
   <div class="card">
     <mu-card v-for="item in newsList"
       :key="item.key">
-      <mu-card-header title="Myron Avatar" subTitle="sub title">
-        <mu-avatar src="../assets/uicon.jpg" slot="avatar"/>
-      </mu-card-header>
-      <mu-card-media title="bbb" subTitle="Image Sub Title">
-        <img src="../assets/sun.jpg" />
+      <mu-card-media :title="item.title">
+        <img :src="item.src" />
       </mu-card-media>
-      <mu-card-title title="Content Title" subTitle="Content Title"/>
-      <mu-card-text>
-        {{item.text}}
-      </mu-card-text>
-      <mu-card-actions>
-        <mu-flat-button label="Action 1"/>
-        <mu-flat-button label="Action 2"/>
-      </mu-card-actions>
+      <mu-card-title :title="item.text" subTitle="Content Title"/>
     </mu-card>
   </div>
 </template>
@@ -26,8 +16,9 @@ export default {
   data () {
     return {
       newsList: [
-        {id : 0, title: 'dujiangyan', text: 'hhh'},
-        {id : 1, title: 'a', text: 'b'}
+        {id : 0, title: '重庆', text: '洪洞崖呀那么美', src: 'src/assets/chongqing.jpg'},
+        {id : 1, title: '都江堰', text: '拜水都江堰', src: 'src/assets/dujiangyan.jpg'},
+        {id : 2, title: '成都', text: 'IFS和大熊猫', src: 'src/assets/chengdu.jpg'}
       ]
     }
   }
