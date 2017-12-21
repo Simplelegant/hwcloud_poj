@@ -11,6 +11,7 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+
 Vue.use(MuseUI)
 Vue.use(AMap)
 AMap.initAMapApiLoader({
